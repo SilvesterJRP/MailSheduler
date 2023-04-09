@@ -27,7 +27,8 @@ def SetUpSMTP(senderMail):
     gmSmtp.starttls()
     token = config.get("UserSettings", "token") 
     fernet = Fernet(token)
-    loginPwd = fernet.decrypt(config.get("UserSettings", "loginPwd")).decode()
+    # loginPwd = fernet.decrypt(config.get("UserSettings", "loginPwd")).decode()
+    loginPwd = "fkajvyrynoawhppa"
 
     try: 
         # Authentication
